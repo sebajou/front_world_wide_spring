@@ -1,0 +1,9 @@
+<h2>Top Springs</h2>
+<div class="springs-menu">
+  <a *ngFor="let spring of springs"
+     routerLink="/detail/{{spring._id}}">
+    {{spring.name}}
+  </a>
+</div>
+
+<app-spring-search></app-spring-search>
