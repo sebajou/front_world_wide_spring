@@ -1,0 +1,10 @@
+<div *ngIf="spring">
+  <h2>{{spring.name | uppercase}} Details</h2>
+  <div><span>_id: </span>{{spring._id}}</div>
+  <div>
+    <label for="spring-name">Spring name: </label>
+    <input id="spring-name" [(ngModel)]="spring.name" placeholder="Spring name"/>
+  </div>
+  <button type="button" (click)="goBack()">go back</button>
+  <button type="button" (click)="save()">save</button>
+</div>

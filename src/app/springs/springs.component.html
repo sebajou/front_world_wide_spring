@@ -1,0 +1,21 @@
+<h2>My Springs</h2>
+
+<div>
+  <label for="new-spring">Spring name: </label>
+  <input id="new-spring" #springName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(springName.value); springName.value=''">
+    Add spring
+  </button>
+</div>
+
+<ul class="springs">
+  <li *ngFor="let spring of springs">
+    <a routerLink="/detail/{{spring._id}}">
+      <span class="badge">{{spring._id}}</span> {{spring.name}}
+    </a>
+    <button type="button" class="delete" title="delete spring"
+            (click)="delete(spring)">x</button>
+  </li>
+</ul>
